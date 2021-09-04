@@ -31,11 +31,11 @@ app.post("/",function(req,res){
 
 };
 var jsonData = JSON.stringify(data);
-const url = "https://us5.api.mailchimp.com/3.0/lists/8e0235488d";
+const url = "https://us5.api.mailchimp.com/3.0/lists/{LIST - ID}";
 
 const options = {
     method:"POST",
-    auth : "_harshdubey:6abad696a398bec642f0a9748dcff24f-us5"
+    auth : "_harshdubey:{API - KEY}"
 };
 
 const request = https.request(url,options,function(response){
@@ -65,5 +65,3 @@ app.listen(process.env.PORT || 3000,function(){
 });
 
 
-// 6abad696a398bec642f0a9748dcff24f-us5
-//8e0235488d
